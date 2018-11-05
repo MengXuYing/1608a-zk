@@ -1,1 +1,1 @@
-body{background:pink}
+*{margin:0;padding:0;list-style:none}html,body{width:100%;height:100%}.wrap{width:100%;height:100%;display:flex;flex-direction:column}.list{width:500px;display:flex;flex-direction:column;margin:0 auto}.list label{width:100%;height:38px;margin-top:10px}.list label input{height:100%;width:60%;border:0;border:1px solid #ccc;border-radius:10px 0 0 10px;padding:0 10px;box-sizing:border-box}.list label button{width:30%;height:100%;border:0;background:#c5c5c5;border:1px solid #ccc;border-radius:0 10px 10px 0;margin-left:-10px;color:#fff}

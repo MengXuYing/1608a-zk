@@ -2,7 +2,7 @@
  * @Author: mengxuying 
  * @Date: 2018-11-05 08:52:41 
  * @Last Modified by: mengxuying
- * @Last Modified time: 2018-11-05 09:12:41
+ * @Last Modified time: 2018-11-05 09:46:25
  */
 //引入
 var gulp = require('gulp');
@@ -15,17 +15,16 @@ var fs = require('fs');
 var path = require('path');
 
 //编译sass
-gulp.task('sass', function() {
+gulp.task('sass_css', function() {
     return gulp.src('./src/sass/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./src/css'))
 });
 
 //监听sass
-// gulp.task('watch', function() {
-//     return gulp.src('./src/**/*.scss')
-//         .pipe(gulp.watch('sass'))
-// });
+gulp.task('watchs', function() {
+    gulp.src('./src/**/*.scss').gulp.series('sass_css');
+});
 
 //压缩js
 gulp.task('uglify', function() {
@@ -55,4 +54,4 @@ gulp.task('server', function() {
 
 
 //整合
-//gulp.task('change', gulp.series('server', 'watch', 'uglify'));
+gulp.task('change', gulp.series('server', 'watchs'));
