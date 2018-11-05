@@ -1,2 +1,9 @@
-var str = '123';
-console.log(str);
+window.onload = function() {
+    var input = document.querySelectorAll('label input');
+    var button = document.querySelectorAll('label button');
+    input.forEach(function(file) {
+        file.onclick = function() {
+            alert(3)
+        }
+    })
+}

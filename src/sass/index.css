@@ -18,7 +18,7 @@ body {
 }
 
 .list {
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

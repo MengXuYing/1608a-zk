@@ -2,7 +2,7 @@
  * @Author: mengxuying 
  * @Date: 2018-11-05 08:52:41 
  * @Last Modified by: mengxuying
- * @Last Modified time: 2018-11-05 09:46:25
+ * @Last Modified time: 2018-11-05 09:53:45
  */
 //引入
 var gulp = require('gulp');
@@ -23,7 +23,7 @@ gulp.task('sass_css', function() {
 
 //监听sass
 gulp.task('watchs', function() {
-    gulp.src('./src/**/*.scss').gulp.series('sass_css');
+    gulp.watch('./src/sass/*/scss', gulp.series('sass_css'));
 });
 
 //压缩js
@@ -52,6 +52,5 @@ gulp.task('server', function() {
 });
 
 
-
 //整合
-gulp.task('change', gulp.series('server', 'watchs'));
+//gulp.task('change', gulp.series('server', 'watchs'));

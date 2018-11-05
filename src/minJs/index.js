@@ -1,1 +1,1 @@
-var str="123";console.log(str);
+window.onload=function(){var l=document.querySelectorAll("label input");document.querySelectorAll("label button");l.forEach(function(l){l.onclick=function(){alert(3)}})};
